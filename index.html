@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>qr</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="qrcode.js"></script>
+</head>
+<body>
+
+<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+<script type="text/javascript">
+
+//建一个实例
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 100,
+	height : 100,
+	// colorDark : "#000000",
+	// colorLight : "#ffffff",
+	// correctLevel : QRCode.CorrectLevel.H
+});
+
+qrcode.makeCode("http://javison.site");
+
+//qrcode.clear(); // clear the code.
+
+</script>
+</body>
